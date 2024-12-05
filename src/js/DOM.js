@@ -1,11 +1,15 @@
 const form = document.getElementById('addForm');
 const itemList = document.getElementById('items');
+const filter = document.getElementById('filter');
 
-// form eventlistener
+// form submit eventlistener
 form.addEventListener('submit', addItem);
 
-// itemlist eventlistener
+// delete eventlistener
 itemList.addEventListener('click', removeItem)
+
+// filer eventlistener
+filter.addEventListener('keyup', filterItems);
 
 // add item
 function addItem(e){
